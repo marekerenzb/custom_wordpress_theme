@@ -20,7 +20,7 @@ gulp.task('sass', function() {
         .pipe(gulpif(config.sourceMaps, sourcemaps.init()))
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(concat('style.css'))
+        .pipe(concat('style.min.css'))
 
     //only uglify if gulp is ran with '--type production'
     .pipe(config.production ? minifyCSS() : util.noop())
