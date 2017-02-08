@@ -25,6 +25,8 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
+
+			<h1>MARK D</h1>
 			
 		</div><!-- .site-branding -->
 
