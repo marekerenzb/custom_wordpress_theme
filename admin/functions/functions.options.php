@@ -106,6 +106,13 @@ $of_options = array();
 $of_options[] = array( 	"name" 		=> "Home Settings",
 						"type" 		=> "heading"
 				);
+
+$of_options[] = array( 	"name" 		=> "Slider Options",
+						"desc" 		=> "Unlimited slider with drag and drop sortings.",
+						"id" 		=> "pingu_slider",
+						"std" 		=> "",
+						"type" 		=> "slider"
+				);
 				
 				
 	}//End function: of_options()

@@ -22,7 +22,7 @@
 		
 			<div class="logo">
 				<h2><?php echo THEMENAME; ?></h2>
-				<span><?php echo ('v'. THEMEVERSION); ?></span>
+				<span><?php echo ('Custom Dashboard Mark D'. THEMEVERSION); ?></span>
 			</div>
 		
 			<div id="js-warning">Warning- This options panel will not work properly without javascript!</div>
@@ -75,4 +75,4 @@
 	<div style="clear:both;"></div>
 
 </div><!--wrap-->
-<div class="smof_footer_info">Slightly Modified Options Framework <strong><?php echo SMOF_VERSION; ?></strong></div>
+<div class="smof_footer_info">Website Framework<strong><?php echo SMOF_VERSION; ?></strong></div>
