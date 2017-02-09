@@ -110,6 +110,9 @@ function markd_custom_theme_scripts() {
 	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/assets/foundation/foundation.min.css', array(), '1', 'all' );
  	wp_enqueue_style( 'foundation' );
 
+ 	wp_enqueue_style( 'foundation-app', get_template_directory_uri() . '/assets/foundation/app.css', array(), '1', 'all' );
+ 	wp_enqueue_style( 'foundation-app' );
+
  	wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/assets/flexslider/flexslider.css', array(), '1', 'all' );
  	wp_enqueue_style( 'flexslider' );  
 
@@ -118,6 +121,10 @@ function markd_custom_theme_scripts() {
  	/*js*/
 	wp_register_script( 'foundation.js',get_template_directory_uri() .'/assets/foundation/foundation.min.js', array( 'jquery' ), '1', false );
  	wp_enqueue_script( 'foundation.js' );
+
+
+ 	wp_register_script( 'foundation-app.js',get_template_directory_uri() .'/assets/foundation/app.js', array( 'jquery' ), '1', false );
+ 	wp_enqueue_script( 'foundation-app.js' );
 
  	wp_register_script( 'flexslider-min.js',get_template_directory_uri() .'/assets/flexslider/foundation.min.js', array( 'jquery' ), '1', false );
  	wp_enqueue_script( 'flexslider.js' );
