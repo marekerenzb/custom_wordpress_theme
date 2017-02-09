@@ -22,8 +22,18 @@ get_header(); ?>
   				<div class="columns">I'm in the middle!</div>
   					<div class="columns">I am as well, but I have so much text I take up more space! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis facere ducimus earum minus, inventore, ratione doloremque deserunt neque perspiciatis accusamus explicabo soluta, quod provident distinctio aliquam omnis? Labore, ullam possimus.</div>
 			</div>
+
+			<div class="row">
+				<div class="large-3 medium-6 small-12 columns">1</div>
+				<div class="large-3 medium-6 small-12 columns">2</div>
+				<div class="large-3 medium-6 small-12 columns">3</div>
+				<div class="large-3 medium-6 small-12 columns">4</div>				
+			</div>
 		
 		</main><!-- #main -->
+
+
+
 
 	</div><!-- #primary -->
 
