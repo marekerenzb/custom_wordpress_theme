@@ -6,6 +6,8 @@ var minifyCSS = require('gulp-minify-css');
 var util = require('gulp-util');
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 
 var config = {
     assetsDir: 'source',
