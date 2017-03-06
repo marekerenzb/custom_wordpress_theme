@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/marekerenzb/custom_wordpress_theme#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
@@ -28,6 +29,5 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1"
-
   }
 }
