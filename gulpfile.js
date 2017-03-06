@@ -17,6 +17,21 @@ var config = {
     sourceMaps: !util.env.production
 };
 
+gulp.task('browser-sync', function() {
+    //watch files
+    var files = [
+        'source/scss/**/*.scss',
+        'source/javascript/**/*.js/'
+    ];
+
+    //initialize browsersync
+    browserSync.init(files, {
+        //browsersync with a php server
+        proxy: "http://dev.testing.com",
+        notify: true
+    });
+});
+
 gulp.task('sass', function() {
     gulp.src(config.assetsDir + '/' + config.sassPattern)
         .pipe(gulpif(config.sourceMaps, sourcemaps.init()))
@@ -27,7 +42,10 @@ gulp.task('sass', function() {
     //only uglify if gulp is ran with '--type production'
     .pipe(config.production ? minifyCSS() : util.noop())
         // .pipe(gulpif(config.sourceMaps, sourcemaps.write('.')))
-        .pipe(gulp.dest('public/css'));
+        .pipe(gulp.dest('public/css'))
+        .pipe(reload({
+            stream: true
+        }));
 });
 
 gulp.task('build-js', function() {
@@ -39,7 +57,15 @@ gulp.task('build-js', function() {
     //only uglify if gulp is ran with '--type production'
     .pipe(config.production ? uglify() : util.noop())
         // .pipe(gulpif(config.sourceMaps, sourcemaps.write('.')))
-        .pipe(gulp.dest('public/js'));
+        .pipe(gulp.dest('public/js'))
+        .pipe(reload({
+            stream: true
+        }));
+});
+
+gulp.task('watch-dev', ['sass', 'build-js', 'browser-sync'], function() {
+    gulp.watch(config.assetsDir + '/' + config.sassPattern, ['sass'])
+    gulp.watch(config.assetsDir + '/' + config.jsPattern, ['build-js'])
 });
 
 gulp.task('watch', function() {
